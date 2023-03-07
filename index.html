@@ -8,10 +8,15 @@
 </head>
 <body>
     <script>
-        
+      let choice = ['Rock', 'Paper', 'Scissors'];
 
+      function computerSelection(){
+        const ran = choice[Math.floor(Math.random()*choice.length)];
+       return ran;
 
+      }
+
+        console.log(computerSelection())
     </script>
-    
 </body>
 </html>
