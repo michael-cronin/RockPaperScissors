@@ -7,16 +7,29 @@
     <title>Document</title>
 </head>
 <body>
+    
     <script>
-      let choice = ['Rock', 'Paper', 'Scissors'];
+      const winMessage = 'You Win!';
+      const loseMessage = 'You Lost!';
+      const choice = ['Rock', 'Paper', 'Scissors'];
+      const playerSelection = prompt('Rock, Paper, or Scissors?')
+      const computerSelection = getComputerChoice();
 
-      function computerSelection(){
+      function getComputerChoice(){
         const ran = choice[Math.floor(Math.random()*choice.length)];
        return ran;
-
       }
 
-        console.log(computerSelection())
+      function roundOne(playerSelection, computerSelection){
+        if (playerSelection == 'Rock' && computerSelection == 'Scissors')
+         { 
+            return(winMessage);
+
+        }
+        
+    }
+        console.log(getComputerChoice());
+        console.log(roundOne(playerSelection, computerSelection));    
     </script>
 </body>
 </html>
