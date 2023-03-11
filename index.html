@@ -24,16 +24,16 @@
       function roundOne(playerSelection, computerSelection){
         if (playerSelection == 'Rock' && computerSelection == 'Scissors' || playerSelection == 'Scissors' && computerSelection == 'Paper' ||
 playerSelection == 'Paper' && computerSelection == 'Rock'){
-    return(winMessage)
+    return alert(winMessage)
 }
 
  else if (playerSelection == 'Rock' && computerSelection == 'Paper' || playerSelection == 'Paper' && computerSelection == 'Scissors' ||
 playerSelection == 'Scissors' && computerSelection == 'Rock') {
-    return(loseMessage)
+    return alert(loseMessage)
 }
 
 else  {
-    return (tieMessage)
+    return alert(tieMessage)
 }
         
         
