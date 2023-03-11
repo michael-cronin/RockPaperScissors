@@ -12,31 +12,32 @@
       const winMessage = 'You Win!';
       const loseMessage = 'You Lost!';
       const tieMessage = 'Its a tie! Throw again!'
-      const choice = ['Rock', 'Paper', 'Scissors'];
+      const choice = ['rock', 'paper', 'scissors'];
       const playerSelection = prompt('Rock, Paper, or Scissors?')
       const computerSelection = getComputerChoice();
+      let playerSelectionfinal = playerSelection.toLowerCase();
 
       function getComputerChoice(){
         const ran = choice[Math.floor(Math.random()*choice.length)];
-       return alert(ran);
+       return(ran);
       }
 
-      function roundOne(playerSelection, computerSelection){
-        if (playerSelection == 'Rock' && computerSelection == 'Scissors' || playerSelection == 'Scissors' && computerSelection == 'Paper' ||
-playerSelection == 'Paper' && computerSelection == 'Rock'){
-    alert("You picked " + playerSelection + "and the computer picked " + ".");
+      function roundOne(playerSelectionfinal, computerSelection){
+        if (playerSelection == 'rock' && computerSelection == 'scissors' || playerSelection == 'scissors' && computerSelection == 'paper' ||
+playerSelection == 'paper' && computerSelection == 'rock'){
+    alert("You picked " + playerSelection + " and the computer picked " +  computerSelection +".");
     alert(winMessage)
 }
 
- else if (playerSelection == 'Rock' && computerSelection == 'Paper' || playerSelection == 'Paper' && computerSelection == 'Scissors' ||
-playerSelection == 'Scissors' && computerSelection == 'Rock') {
-    alert("You picked " + playerSelection + "and the computer picked " + ".");
-    return alert(loseMessage)
+ else if (playerSelection == 'rock' && computerSelection == 'paper' || playerSelection == 'paper' && computerSelection == 'scissors' ||
+playerSelection == 'scissors' && computerSelection == 'rock') {
+    alert("You picked " + playerSelection + " and the computer picked " +  computerSelection +".");
+    alert(loseMessage)
 }
 
 else  {
-    alert("You picked " + playerSelection + "and the computer picked " + ".");
-    return alert(tieMessage)
+    alert("You picked " + playerSelection + "  and the computer picked " +  computerSelection +".");
+    alert(tieMessage)
 }
         
         
