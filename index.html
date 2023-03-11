@@ -18,21 +18,24 @@
 
       function getComputerChoice(){
         const ran = choice[Math.floor(Math.random()*choice.length)];
-       return ran;
+       return alert(ran);
       }
 
       function roundOne(playerSelection, computerSelection){
         if (playerSelection == 'Rock' && computerSelection == 'Scissors' || playerSelection == 'Scissors' && computerSelection == 'Paper' ||
 playerSelection == 'Paper' && computerSelection == 'Rock'){
-    return alert(winMessage)
+    alert("You picked " + playerSelection + "and the computer picked " + ".");
+    alert(winMessage)
 }
 
  else if (playerSelection == 'Rock' && computerSelection == 'Paper' || playerSelection == 'Paper' && computerSelection == 'Scissors' ||
 playerSelection == 'Scissors' && computerSelection == 'Rock') {
+    alert("You picked " + playerSelection + "and the computer picked " + ".");
     return alert(loseMessage)
 }
 
 else  {
+    alert("You picked " + playerSelection + "and the computer picked " + ".");
     return alert(tieMessage)
 }
         
@@ -40,8 +43,8 @@ else  {
     }
 
         
-      alert('Computer Chooses ' + getComputerChoice())
-      alert(roundOne())
+      
+      roundOne(playerSelection, computerSelection)
 
         
     </script>
