@@ -11,6 +11,7 @@
     <script>
       const winMessage = 'You Win!';
       const loseMessage = 'You Lost!';
+      const tieMessage = 'Its a tie! Throw again!'
       const choice = ['Rock', 'Paper', 'Scissors'];
       const playerSelection = prompt('Rock, Paper, or Scissors?')
       const computerSelection = getComputerChoice();
@@ -21,18 +22,28 @@
       }
 
       function roundOne(playerSelection, computerSelection){
-        if (playerSelection == 'Rock' && computerSelection == 'Scissors')
-         { 
-            return(winMessage);
+        if (playerSelection == 'Rock' && computerSelection == 'Scissors' || playerSelection == 'Scissors' && computerSelection == 'Paper' ||
+playerSelection == 'Paper' && computerSelection == 'Rock'){
+    return(winMessage)
+}
 
-        }
-        else  
-            return(loseMessage)
+ else if (playerSelection == 'Rock' && computerSelection == 'Paper' || playerSelection == 'Paper' && computerSelection == 'Scissors' ||
+playerSelection == 'Scissors' && computerSelection == 'Rock') {
+    return(loseMessage)
+}
+
+else  {
+    return (tieMessage)
+}
         
         
     }
-        console.log(getComputerChoice());
-        console.log(roundOne(playerSelection, computerSelection));    
+
+        
+      alert(getComputerChoice())
+      alert(roundOne())
+
+        
     </script>
 </body>
 </html>
